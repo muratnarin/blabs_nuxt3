@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-app-bar app>
-      <v-toolbar-title>Default</v-toolbar-title>
+      <v-toolbar-title>Authenticated</v-toolbar-title>
     </v-app-bar>
     <v-main>
       <v-main>
@@ -15,7 +15,7 @@
 
 <script>
 export default {
-  name: "default"
+  name: "Authenticated"
 }
 </script>
 
