@@ -3,7 +3,7 @@ import vuetify from "vite-plugin-vuetify";
 import eslintPlugin from "vite-plugin-eslint";
 
 export default defineNuxtConfig({
-    modules: ['nuxt-icon', "@nuxtjs/google-fonts", ['@pinia/nuxt',      {
+    modules: ['nuxt-icon', "@nuxtjs/google-fonts", '@vueuse/nuxt', ['@pinia/nuxt',{
         autoImports: [
           'defineStore',
           ['defineStore', 'definePiniaStore'],
@@ -19,7 +19,7 @@ export default defineNuxtConfig({
     css: ["vuetify/styles"],
     build: { transpile: ["vuetify"] },
     vite: { ssr: { noExternal: ['vuetify'] } , plugins: [eslintPlugin()]},
-    plugins: ["~/plugins/vuetify.ts"],
+    plugins: ["~/plugins/vuetify.ts", "~/plugins/vee-validate.ts"],
     googleFonts: { families: { Roboto: true, "Material+Icons": true }, download: false, useStylesheet: true },
     imports: {
         dirs: ['./stores']

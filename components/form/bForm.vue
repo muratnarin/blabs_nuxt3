@@ -15,6 +15,13 @@ const onSubmit = (values) => {
     console.log(values);
 };
 
+defineProps({
+  schema: {
+    type: Object,
+    required: true,
+  },
+});
+
 
 </script>
 
