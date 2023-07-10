@@ -27,12 +27,10 @@
     "vite-plugin-eslint": "^1.8.1"
   },
   "dependencies": {
-    "@formvuelate/plugin-vee-validate": "^3.9.1",
     "@pinia/nuxt": "^0.4.6",
-    "@vee-validate/rules": "^4.7.4",
+    "@vee-validate/nuxt": "^4.9.4",
     "@vueuse/nuxt": "^9.12.0",
     "chart.js": "^4.2.1",
-    "vee-validate": "^4.7.4",
     "vite-plugin-vuetify": "^1.0.1",
     "vue-chartjs": "^5.2.0",
     "vuetify": "^3.1.2",

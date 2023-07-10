@@ -2,8 +2,9 @@
 import vuetify from "vite-plugin-vuetify";
 import eslintPlugin from "vite-plugin-eslint";
 
+// @ts-ignore
 export default defineNuxtConfig({
-    modules: ['nuxt-icon', "@nuxtjs/google-fonts", '@vueuse/nuxt', ['@pinia/nuxt',{
+    modules: ['nuxt-icon', "@nuxtjs/google-fonts", '@vueuse/nuxt', '@vee-validate/nuxt', ['@pinia/nuxt',{
         autoImports: [
           'defineStore',
           ['defineStore', 'definePiniaStore'],
@@ -16,12 +17,24 @@ export default defineNuxtConfig({
             })
         ))
     }],
+    // @ts-ignore
     css: ["vuetify/styles"],
     build: { transpile: ["vuetify"] },
     vite: { ssr: { noExternal: ['vuetify'] } , plugins: [eslintPlugin()]},
-    plugins: ["~/plugins/vuetify.ts", "~/plugins/vee-validate.ts"],
+    plugins: ["~/plugins/vuetify.ts"],
     googleFonts: { families: { Roboto: true, "Material+Icons": true }, download: false, useStylesheet: true },
     imports: {
         dirs: ['./stores']
-    }
+    },
+    veeValidate: {
+        // disable or enable auto imports
+        autoImports: true,
+        // Use different names for components
+        componentNames: {
+            Form: 'VeeForm',
+            Field: 'VeeField',
+            FieldArray: 'VeeFieldArray',
+            ErrorMessage: 'VeeErrorMessage',
+        },
+    },
 })

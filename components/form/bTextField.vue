@@ -19,7 +19,7 @@ const props = defineProps({
   },
   type: {
     type: String,
-    required: true,
+    required: true
   },
   label: {
     type: String,

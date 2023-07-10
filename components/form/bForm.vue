@@ -1,18 +1,26 @@
 <template>
-  <Form
+  <vee-form
     as="v-form"
     :validation-schema="schema"
     @submit="onSubmit"
   >
     <slot />
-  </Form>
+    <v-btn
+      block
+      type="submit"
+    >
+      Submit
+    </v-btn>
+  </vee-form>
 </template>
 
 <script setup>
-import { Form } from 'vee-validate';
+
+const emit = defineEmits(['submit']);
 
 const onSubmit = (values) => {
-    console.log(values);
+    console.log('inner with', values);
+    emit('submit', values);
 };
 
 defineProps({
