@@ -16,7 +16,9 @@ export default defineNuxtConfig({
                 // styles: { configFile: "settings.scss" },
             })
         ))
-    }],
+    },
+        '@nuxt/content',
+    ],
     // @ts-ignore
     css: ["vuetify/styles"],
     build: { transpile: ["vuetify"] },
